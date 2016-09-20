@@ -144,7 +144,7 @@ public class JSONJam: Deserializable {
             if let urlArray = urlArray {
                 var parameterizedArray = [String]()
                 for url in urlArray {
-                    parameterizedArray.append(url.absoluteString)
+                    parameterizedArray.append(url.absoluteString!)
                 }
                 self.parameters[key] = parameterizedArray
             }
