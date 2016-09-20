@@ -1,12 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'JSONJam_Example', :exclusive => true do
+target 'JSONJam_Example' do
   pod "JSONJam", :path => "../"
+  pod "JSONHelper", :git => 'https://github.com/Pluto-tv/JSONHelper.git'
 end
 
-target 'JSONJam_Tests', :exclusive => true do
+target 'JSONJam_Tests' do
   pod "JSONJam", :path => "../"
-
-  
+  pod "JSONHelper", :git => 'https://github.com/Pluto-tv/JSONHelper.git'
 end

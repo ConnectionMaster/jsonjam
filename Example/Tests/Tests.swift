@@ -24,60 +24,60 @@ class Tests: XCTestCase {
         if let rebuiltProduct = rebuiltProduct {
             
             XCTAssertNotNil(rebuiltProduct.productDescription, "product description can't be nil")
-            if let productDescription = randomProduct.productDescription, rebuiltProductDescription = rebuiltProduct.productDescription {
+            if let productDescription = randomProduct.productDescription, let rebuiltProductDescription = rebuiltProduct.productDescription {
                 XCTAssertEqual(productDescription, rebuiltProductDescription, "product description must match")
             }
             
             XCTAssertNotNil(rebuiltProduct.tags, "tags can't be nil")
-            if let tags = randomProduct.tags, rebuiltTags = rebuiltProduct.tags {
+            if let tags = randomProduct.tags, let rebuiltTags = rebuiltProduct.tags {
                 XCTAssertEqual(tags, rebuiltTags, "tags must match")
             }
             
             XCTAssertNotNil(rebuiltProduct.price, "price can't be nil")
-            if let price = randomProduct.price, rebuildPrice = rebuiltProduct.price {
+            if let price = randomProduct.price, let rebuildPrice = rebuiltProduct.price {
                 XCTAssertEqual(price, rebuildPrice, "price must match")
             }
             
             XCTAssertNotNil(rebuiltProduct.creationDate, "creationDate can't be nil")
-            if let creationDate = randomProduct.creationDate, rebuiltCreationDate = rebuiltProduct.creationDate {
+            if let creationDate = randomProduct.creationDate, let rebuiltCreationDate = rebuiltProduct.creationDate {
                 XCTAssertEqualWithAccuracy(creationDate.timeIntervalSinceReferenceDate, rebuiltCreationDate.timeIntervalSinceReferenceDate, 1, "creationDate must match")
             }
             
             XCTAssertNotNil(rebuiltProduct.creationDate, "creationDate can't be nil")
-            if let transactionDates = randomProduct.transactionDates, rebuiltTransactionDates = rebuiltProduct.transactionDates {
+            if let transactionDates = randomProduct.transactionDates, let rebuiltTransactionDates = rebuiltProduct.transactionDates {
                 for i in 0..<transactionDates.count {
                     XCTAssertEqualWithAccuracy(transactionDates[i].timeIntervalSinceReferenceDate, rebuiltTransactionDates[i].timeIntervalSinceReferenceDate, 1, "transactionDates must match")
                 }
             }
             
             XCTAssertNotNil(rebuiltProduct.detailURL, "detailURL can't be nil")
-            if let detailURL = randomProduct.detailURL, rebuildDetailURL = rebuiltProduct.detailURL {
+            if let detailURL = randomProduct.detailURL, let rebuildDetailURL = rebuiltProduct.detailURL {
                 XCTAssertEqual(detailURL, rebuildDetailURL, "detailURL must match")
             }
             
             XCTAssertNotNil(rebuiltProduct.photoURLs, "photoURLs can't be nil")
-            if let photoURLs = randomProduct.photoURLs, rebuildPhotoURLs = rebuiltProduct.photoURLs {
+            if let photoURLs = randomProduct.photoURLs, let rebuildPhotoURLs = rebuiltProduct.photoURLs {
                 XCTAssertEqual(photoURLs, rebuildPhotoURLs, "photoURLs must match")
             }
             
             XCTAssertNotNil(rebuiltProduct.owner, "owner can't be nil")
-            if let owner = randomProduct.owner, rebuiltOwner = rebuiltProduct.owner {
+            if let owner = randomProduct.owner, let rebuiltOwner = rebuiltProduct.owner {
                 
                 XCTAssertNotNil(rebuiltOwner.name, "owner name can't be nil")
-                if let name = owner.name, rebuiltName = rebuiltOwner.name {
+                if let name = owner.name, let rebuiltName = rebuiltOwner.name {
                     XCTAssertEqual(name, rebuiltName, "owner name must match")
                 }
                 
                 XCTAssertNotNil(rebuiltOwner.shoeSize, "owner shoeSize can't be nil")
-                if let shoeSize = owner.shoeSize, rebuiltShoeSize = rebuiltOwner.shoeSize {
+                if let shoeSize = owner.shoeSize, let rebuiltShoeSize = rebuiltOwner.shoeSize {
                     
                     XCTAssertNotNil(rebuiltShoeSize.size, "shoeSize size can't be nil")
-                    if let size = shoeSize.size, rebuiltSize = rebuiltShoeSize.size {
+                    if let size = shoeSize.size, let rebuiltSize = rebuiltShoeSize.size {
                         XCTAssertEqual(size, rebuiltSize, "shoeSize size must match")
                     }
                     
                     XCTAssertNotNil(rebuiltShoeSize.sizeSystem?.rawValue, "shoeSize sizeSystem can't be nil")
-                    if let sizeSystem = shoeSize.sizeSystem, rebuiltSizeSystem = rebuiltShoeSize.sizeSystem {
+                    if let sizeSystem = shoeSize.sizeSystem, let rebuiltSizeSystem = rebuiltShoeSize.sizeSystem {
                         XCTAssertEqual(sizeSystem, rebuiltSizeSystem, "shoeSize sizeSystem must match")
                     }
                 }
@@ -163,12 +163,12 @@ class Tests: XCTestCase {
         }
         
         product.price = Double(arc4random_uniform(200))
-        product.creationDate = NSDate()
-        product.transactionDates = [NSDate(), NSDate()]
+        product.creationDate = Date()
+        product.transactionDates = [Date(), Date()]
         product.owner = createRandomUser()
         product.buyers = [createRandomUser(), createRandomUser(), createRandomUser()]
-        product.detailURL = NSURL(string: "http://mattluedke.com/")
-        product.photoURLs = [NSURL(string: "http://www.mattluedke.com/wp-content/uploads/2013/08/cropped-IMG_2495.jpg")!, NSURL(string: "http://www.mattluedke.com/wp-content/uploads/2013/08/cropped-IMG_24971.jpg")!]
+        product.detailURL = URL(string: "http://mattluedke.com/")
+        product.photoURLs = [URL(string: "http://www.mattluedke.com/wp-content/uploads/2013/08/cropped-IMG_2495.jpg")!, URL(string: "http://www.mattluedke.com/wp-content/uploads/2013/08/cropped-IMG_24971.jpg")!]
         
         return product
     }

@@ -1,19 +1,24 @@
-public class JSONJam: Deserializable {
+import JSONHelper
+import Foundation
+
+public typealias JSONDictionary = [String: AnyObject]
+
+open class JSONJam: Deserializable {
+
+    fileprivate var jsonData: JSONDictionary?
+    fileprivate var parameters = JSONDictionary()
     
-    private var jsonData: JSONDictionary?
-    private var parameters = JSONDictionary()
-    
-    public func propertyMap() {
+    open func propertyMap() {
         fatalError("must override this")
     }
     
-    public func parameterize() -> JSONDictionary {
+    open func parameterize() -> JSONDictionary {
         propertyMap()
         return parameters
     }
     
-    required public init(data: JSONDictionary) {
-        jsonData = data
+    required public init(dictionary: JSONDictionary) {
+        jsonData = dictionary
         propertyMap()
         jsonData = nil
     }
@@ -21,156 +26,158 @@ public class JSONJam: Deserializable {
     public init() {
     }
     
-    public func map(key: String, inout boolean: Bool?) {
+    open func map(_ key: String, boolean: inout Bool?) {
         if let jsonData = jsonData {
             boolean <-- jsonData[key]
         } else {
-            parameters[key] = boolean
+            parameters[key] = boolean as AnyObject?
         }
     }
     
-    public func map(key: String, inout booleanArray: [Bool]?) {
+    open func map(_ key: String, booleanArray: inout [Bool]?) {
         if let jsonData = jsonData {
             booleanArray <-- jsonData[key]
         } else {
-            parameters[key] = booleanArray
+            parameters[key] = booleanArray as AnyObject?
         }
     }
     
-    public func map(key: String, inout int: Int?) {
+    open func map(_ key: String, int: inout Int?) {
         if let jsonData = jsonData {
             int <-- jsonData[key]
         } else {
-            parameters[key] = int
+            parameters[key] = int as AnyObject?
         }
     }
     
-    public func map(key: String, inout intArray: [Int]?) {
+    open func map(_ key: String, intArray: inout [Int]?) {
         if let jsonData = jsonData {
             intArray <-- jsonData[key]
         } else {
-            parameters[key] = intArray
+            parameters[key] = intArray as AnyObject?
         }
     }
     
-    public func map(key: String, inout float: Float?) {
+    open func map(_ key: String, float: inout Float?) {
         if let jsonData = jsonData {
             float <-- jsonData[key]
         } else {
-            parameters[key] = float
+            parameters[key] = float as AnyObject?
         }
     }
     
-    public func map(key: String, inout floatArray: [Float]?) {
+    open func map(_ key: String, floatArray: inout [Float]?) {
         if let jsonData = jsonData {
             floatArray <-- jsonData[key]
         } else {
-            parameters[key] = floatArray
+            parameters[key] = floatArray as AnyObject?
         }
     }
     
-    public func map(key: String, inout double: Double?) {
+    open func map(_ key: String, double: inout Double?) {
         if let jsonData = jsonData {
             double <-- jsonData[key]
         } else {
-            parameters[key] = double
+            parameters[key] = double as AnyObject?
         }
     }
     
-    public func map(key: String, inout doubleArray: [Double]?) {
+    open func map(_ key: String, doubleArray: inout [Double]?) {
         if let jsonData = jsonData {
             doubleArray <-- jsonData[key]
         } else {
-            parameters[key] = doubleArray
+            parameters[key] = doubleArray as AnyObject?
         }
     }
     
-    public func map(key: String, inout string: String?) {
+    open func map(_ key: String, string: inout String?) {
         if let jsonData = jsonData {
             string <-- jsonData[key]
         } else {
-            parameters[key] = string
+            parameters[key] = string as AnyObject?
         }
     }
     
-    public func map(key: String, inout stringArray: [String]?) {
+    open func map(_ key: String, stringArray: inout [String]?) {
         if let jsonData = jsonData {
             stringArray <-- jsonData[key]
         } else {
-            parameters[key] = stringArray
+            parameters[key] = stringArray as AnyObject?
         }
     }
     
-    public func map(key: String, inout date: NSDate?, var dateFormat: String) {
+    public func map(_ key: String, date: inout Date?, dateFormat: String) {
+        let dateFormat = dateFormat
         if let jsonData = jsonData {
-            date <-- (jsonData[key], dateFormat)
+            date <-- (jsonData[key], dateFormat as AnyObject?)
         } else {
             if let date = date {
-                let dateFormatter = NSDateFormatter()
+                let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = dateFormat
-                parameters[key] = dateFormatter.stringFromDate(date)
+                parameters[key] = dateFormatter.string(from: date) as AnyObject?
             }
         }
     }
     
-    public func map(key: String, inout dateArray: [NSDate]?, var dateFormat: String) {
+    public func map(_ key: String, dateArray: inout [Date]?, dateFormat: String) {
+        var dateFormat = dateFormat
         if let jsonData = jsonData {
             dateArray <-- (jsonData[key], dateFormat)
         } else {
             if let dateArray = dateArray {
-                let dateFormatter = NSDateFormatter()
+                let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = dateFormat
                 var parameterizedArray = [String]()
                 for date in dateArray {
-                    parameterizedArray.append(dateFormatter.stringFromDate(date))
+                    parameterizedArray.append(dateFormatter.string(from: date))
                 }
-                self.parameters[key] = parameterizedArray
+                self.parameters[key] = parameterizedArray as AnyObject?
             }
         }
     }
     
-    public func map(key: String, inout url: NSURL?) {
+    open func map(_ key: String, url: inout URL?) {
         if let jsonData = jsonData {
             url <-- jsonData[key]
         } else {
-            parameters[key] = url?.absoluteString
+            parameters[key] = url?.absoluteString as AnyObject?
         }
     }
     
-    public func map(key: String, inout urlArray: [NSURL]?) {
+    open func map(_ key: String, urlArray: inout [URL]?) {
         if let jsonData = jsonData {
             urlArray <-- jsonData[key]
         } else {
             if let urlArray = urlArray {
                 var parameterizedArray = [String]()
                 for url in urlArray {
-                    parameterizedArray.append(url.absoluteString!)
+                    parameterizedArray.append(url.absoluteString)
                 }
-                self.parameters[key] = parameterizedArray
+                self.parameters[key] = parameterizedArray as AnyObject?
             }
         }
     }
     
-    public func map<T:JSONJam>(key: String, inout object: T?) {
+    open func map<T:JSONJam>(_ key: String, object: inout T?) {
         if let jsonData = jsonData {
             if let data = convertToNilIfNull(jsonData[key]) as? JSONDictionary {
-                object = T(data: data)
+                object = T(dictionary: data)
             } else {
                 object = nil
             }
         } else {
             if let object = object {
-                self.parameters[key] = object.parameterize()
+                self.parameters[key] = object.parameterize() as AnyObject?
             }
         }
     }
     
-    public func map<T:JSONJam>(key: String, inout objectArray: [T]?) {
+    open func map<T:JSONJam>(_ key: String, objectArray: inout [T]?) {
         if let jsonData = jsonData {
             if let dataArray = convertToNilIfNull(jsonData[key]) as? [JSONDictionary] {
                 objectArray = [T]()
                 for data in dataArray {
-                    objectArray!.append(T(data: data))
+                    objectArray!.append(T(dictionary: data))
                 }
             } else {
                 objectArray = nil
@@ -179,14 +186,14 @@ public class JSONJam: Deserializable {
             if let objectArray = objectArray {
                 var parameterizedArray = [AnyObject]()
                 for object in objectArray {
-                    parameterizedArray.append(object.parameterize())
+                    parameterizedArray.append(object.parameterize() as AnyObject)
                 }
-                self.parameters[key] = parameterizedArray
+                self.parameters[key] = parameterizedArray as AnyObject?
             }
         }
     }
     
-    public func map<T>(key: String, serializeClosure: (inout AnyObject?) -> Void, deserializeClosure: (T?) -> Void) {
+    open func map<T>(_ key: String, serializeClosure: (inout AnyObject?) -> Void, deserializeClosure: (T?) -> Void) {
         if let jsonData = jsonData {
             deserializeClosure(jsonData[key] as! T?)
         } else {
@@ -194,7 +201,7 @@ public class JSONJam: Deserializable {
         }
     }
     
-    private func convertToNilIfNull(object: AnyObject?) -> AnyObject? {
+    fileprivate func convertToNilIfNull(_ object: AnyObject?) -> AnyObject? {
         if object is NSNull {
             return nil
         }

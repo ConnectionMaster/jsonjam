@@ -1,14 +1,27 @@
 PODS:
-  - JSONJam (1.0.0)
+  - JSONHelper (2.1.0)
+  - JSONJam (1.0.0):
+    - JSONHelper
 
 DEPENDENCIES:
+  - JSONHelper (from `https://github.com/Pluto-tv/JSONHelper.git`)
   - JSONJam (from `../`)
 
 EXTERNAL SOURCES:
+  JSONHelper:
+    :git: https://github.com/Pluto-tv/JSONHelper.git
   JSONJam:
     :path: "../"
 
-SPEC CHECKSUMS:
-  JSONJam: 11fb6de45e2d4d1ad8bfb15d20154467b5b02386
+CHECKOUT OPTIONS:
+  JSONHelper:
+    :commit: 16f47e23e572a9cebf95dc4a25b6fbf375288489
+    :git: https://github.com/Pluto-tv/JSONHelper.git
 
-COCOAPODS: 0.38.0
+SPEC CHECKSUMS:
+  JSONHelper: 684a9ffd73578f370c0a02197319a97e37120124
+  JSONJam: 414bce2c31ae551a3697e40a84997c2d5548ab68
+
+PODFILE CHECKSUM: d0c08da4c2325b73e26668980907d778c10da449
+
+COCOAPODS: 1.1.0.rc.2

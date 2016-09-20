@@ -8,22 +8,22 @@
 
 import JSONJam
 
-public class Product: JSONJam {
+open class Product: JSONJam {
     
-    public var dateFormat = "yyyy-MM-dd HH:mm:ss"
+    open var dateFormat = "yyyy-MM-dd HH:mm:ss"
     
-    public var productDescription: String?
-    public var tags: [String]?
-    public var price: Double?
-    public var creationDate: NSDate?
-    public var transactionDates: [NSDate]?
-    public var owner: User?
-    public var buyers: [User]?
-    public var detailURL: NSURL?
-    public var photoURLs: [NSURL]?
-    public var thingIDontWantSerialized: String?
+    open var productDescription: String?
+    open var tags: [String]?
+    open var price: Double?
+    open var creationDate: Date?
+    open var transactionDates: [Date]?
+    open var owner: User?
+    open var buyers: [User]?
+    open var detailURL: URL?
+    open var photoURLs: [URL]?
+    open var thingIDontWantSerialized: String?
     
-    override public func propertyMap() {
+    override open func propertyMap() {
         map("product_description", string: &productDescription)
         map("tags", stringArray: &tags)
         map("price", double: &price)

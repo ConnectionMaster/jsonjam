@@ -5,16 +5,24 @@
   "homepage": "https://github.com/mluedke2/JSONJam",
   "license": "MIT",
   "authors": {
-    "mluedke2": "mluedke2@gmail.com"
+    "Matt Luedke": "mluedke2@gmail.com"
   },
   "source": {
     "git": "https://github.com/mluedke2/JSONJam.git",
     "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "osx": "10.9",
+    "watchos": "2.0",
+    "tvos": "9.0"
   },
   "requires_arc": true,
+  "dependencies": {
+    "JSONHelper": [
+
+    ]
+  },
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "JSONJam": [

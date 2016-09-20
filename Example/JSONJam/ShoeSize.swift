@@ -8,7 +8,7 @@
 
 import JSONJam
 
-public class ShoeSize: JSONJam {
+open class ShoeSize: JSONJam {
     
     public enum SizeSystem: String {
         case UnitedStates = "US"
@@ -17,13 +17,13 @@ public class ShoeSize: JSONJam {
         case Australia = "AUS"
     }
     
-    public var size: Int?
-    public var sizeSystem: SizeSystem?
+    open var size: Int?
+    open var sizeSystem: SizeSystem?
     
-    override public func propertyMap() {
+    override open func propertyMap() {
         map("size", int: &size)
         map("system",
-            serializeClosure:{ (inout outgoingParameter: AnyObject?) -> Void in
+            serializeClosure:{ (outgoingParameter: inout AnyObject?) -> Void in
                 outgoingParameter = self.sizeSystem?.rawValue as AnyObject?
             },
             deserializeClosure: { (data: String?) -> Void in

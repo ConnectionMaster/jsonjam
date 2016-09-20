@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.requires_arc = true
 
+  s.dependency 'JSONHelper'
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'JSONJam' => ['Pod/Assets/*.png']

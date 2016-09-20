@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278CD24469929CA04B8AE234 /* Pods_JSONJam_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654C182E83211B2A578EBCBE /* Pods_JSONJam_Tests.framework */; };
+		5A9C9E81C95828219BB65382 /* Pods_JSONJam_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2BA78BE3F21F672ADA3CFE /* Pods_JSONJam_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		9C5CA3E849C2EC896641DA74 /* Pods_JSONJam_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B115E10063C03B065E9F12B /* Pods_JSONJam_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A0C300A8E2FB43811754B241 /* Pods_JSONJam_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8779469D4A39C90E16A1661 /* Pods_JSONJam_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FA7513791B5ACABB00256657 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7513781B5ACABB00256657 /* Product.swift */; };
 		FA75137B1B5ACAF000256657 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75137A1B5ACAF000256657 /* User.swift */; };
 		FA75137D1B5ACB1000256657 /* ShoeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75137C1B5ACB1000256657 /* ShoeSize.swift */; };
@@ -31,12 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EFF578AA714D0855EF17A2C /* Pods-JSONJam_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Example/Pods-JSONJam_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2B115E10063C03B065E9F12B /* Pods_JSONJam_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONJam_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		015A0D7E871B46D4CC954EA7 /* Pods-JSONJam_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2BAD819EFF84F8B58EBA8F00 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		392C916F871893766DC9C4F0 /* JSONJam.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JSONJam.podspec; path = ../JSONJam.podspec; sourceTree = "<group>"; };
-		3948EB513370356C8A7FF89D /* Pods-JSONJam_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4B076FC9D6B5F1A4F11E9BA4 /* Pods-JSONJam_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Example/Pods-JSONJam_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* JSONJam_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONJam_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +44,12 @@
 		607FACE51AFB9204008FA782 /* JSONJam_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONJam_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		654C182E83211B2A578EBCBE /* Pods_JSONJam_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONJam_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		750AD3314577C61F8B028DF2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		851CFD18A4839C85EE1E091F /* Pods-JSONJam_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A8779469D4A39C90E16A1661 /* Pods_JSONJam_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONJam_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2BA78BE3F21F672ADA3CFE /* Pods_JSONJam_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONJam_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2771C2CD0A805EFA9249A9 /* Pods-JSONJam_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Example/Pods-JSONJam_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D366A857325E6FBE9C552F43 /* Pods-JSONJam_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF0204BC6384BBFAE47FB38A /* Pods-JSONJam_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONJam_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSONJam_Example/Pods-JSONJam_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FA7513781B5ACABB00256657 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FA75137A1B5ACAF000256657 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA75137C1B5ACB1000256657 /* ShoeSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeSize.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C300A8E2FB43811754B241 /* Pods_JSONJam_Example.framework in Frameworks */,
+				5A9C9E81C95828219BB65382 /* Pods_JSONJam_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,22 +68,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C5CA3E849C2EC896641DA74 /* Pods_JSONJam_Tests.framework in Frameworks */,
+				278CD24469929CA04B8AE234 /* Pods_JSONJam_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00F685E600C29DEE82B614A5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A8779469D4A39C90E16A1661 /* Pods_JSONJam_Example.framework */,
-				2B115E10063C03B065E9F12B /* Pods_JSONJam_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +82,8 @@
 				607FACD21AFB9204008FA782 /* Example for JSONJam */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				804931045EB3C85F693FEF1D /* Pods */,
-				00F685E600C29DEE82B614A5 /* Frameworks */,
+				FC026F16B4CC24D8600711EB /* Pods */,
+				65056A4134BF5123ED734E3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,15 +141,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		804931045EB3C85F693FEF1D /* Pods */ = {
+		65056A4134BF5123ED734E3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B076FC9D6B5F1A4F11E9BA4 /* Pods-JSONJam_Example.debug.xcconfig */,
-				0EFF578AA714D0855EF17A2C /* Pods-JSONJam_Example.release.xcconfig */,
-				3948EB513370356C8A7FF89D /* Pods-JSONJam_Tests.debug.xcconfig */,
-				851CFD18A4839C85EE1E091F /* Pods-JSONJam_Tests.release.xcconfig */,
+				7E2BA78BE3F21F672ADA3CFE /* Pods_JSONJam_Example.framework */,
+				654C182E83211B2A578EBCBE /* Pods_JSONJam_Tests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FA7513761B5ACA9100256657 /* GeneratedFiles */ = {
@@ -184,6 +173,17 @@
 			name = TestableFiles;
 			sourceTree = "<group>";
 		};
+		FC026F16B4CC24D8600711EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF0204BC6384BBFAE47FB38A /* Pods-JSONJam_Example.debug.xcconfig */,
+				BC2771C2CD0A805EFA9249A9 /* Pods-JSONJam_Example.release.xcconfig */,
+				D366A857325E6FBE9C552F43 /* Pods-JSONJam_Tests.debug.xcconfig */,
+				015A0D7E871B46D4CC954EA7 /* Pods-JSONJam_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,12 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "JSONJam_Example" */;
 			buildPhases = (
-				76376343A1E9BD56D121586B /* Check Pods Manifest.lock */,
+				78D567C4AF00AF6F72DEFC25 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				8AA5B5F07BEB226D173DCE2C /* Embed Pods Frameworks */,
-				B2AFC421C97AB9D8237B57F9 /* Copy Pods Resources */,
+				4B472EC61CC1D9A6E3E3A866 /* [CP] Embed Pods Frameworks */,
+				C7018AE72DBD77C72F1B817B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,12 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "JSONJam_Tests" */;
 			buildPhases = (
-				ABF918C96617DA2C8034FB8F /* Check Pods Manifest.lock */,
+				53F28EE404A6CDA733AE7705 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				326BD78B49407A80710F426C /* Embed Pods Frameworks */,
-				EBB72107AC08B2D313D3DEB3 /* Copy Pods Resources */,
+				0BA99A03C69FFFC66D037BA6 /* [CP] Embed Pods Frameworks */,
+				45C3CA6A6AF964E4E193D73E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,9 +239,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -286,14 +288,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		326BD78B49407A80710F426C /* Embed Pods Frameworks */ = {
+		0BA99A03C69FFFC66D037BA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,29 +303,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		76376343A1E9BD56D121586B /* Check Pods Manifest.lock */ = {
+		45C3CA6A6AF964E4E193D73E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8AA5B5F07BEB226D173DCE2C /* Embed Pods Frameworks */ = {
+		4B472EC61CC1D9A6E3E3A866 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,49 +333,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSONJam_Example/Pods-JSONJam_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ABF918C96617DA2C8034FB8F /* Check Pods Manifest.lock */ = {
+		53F28EE404A6CDA733AE7705 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B2AFC421C97AB9D8237B57F9 /* Copy Pods Resources */ = {
+		78D567C4AF00AF6F72DEFC25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C7018AE72DBD77C72F1B817B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSONJam_Example/Pods-JSONJam_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EBB72107AC08B2D313D3DEB3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSONJam_Tests/Pods-JSONJam_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -512,31 +514,33 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B076FC9D6B5F1A4F11E9BA4 /* Pods-JSONJam_Example.debug.xcconfig */;
+			baseConfigurationReference = EF0204BC6384BBFAE47FB38A /* Pods-JSONJam_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JSONJam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EFF578AA714D0855EF17A2C /* Pods-JSONJam_Example.release.xcconfig */;
+			baseConfigurationReference = BC2771C2CD0A805EFA9249A9 /* Pods-JSONJam_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JSONJam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3948EB513370356C8A7FF89D /* Pods-JSONJam_Tests.debug.xcconfig */;
+			baseConfigurationReference = D366A857325E6FBE9C552F43 /* Pods-JSONJam_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -550,13 +554,14 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONJam_Example.app/JSONJam_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 851CFD18A4839C85EE1E091F /* Pods-JSONJam_Tests.release.xcconfig */;
+			baseConfigurationReference = 015A0D7E871B46D4CC954EA7 /* Pods-JSONJam_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -566,6 +571,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JSONJam_Example.app/JSONJam_Example";
 			};
 			name = Release;

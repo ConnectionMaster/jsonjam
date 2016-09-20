@@ -8,12 +8,12 @@
 
 import JSONJam
 
-public class User: JSONJam {
+open class User: JSONJam {
     
-    public var name: String?
-    public var shoeSize: ShoeSize?
+    open var name: String?
+    open var shoeSize: ShoeSize?
     
-    override public func propertyMap() {
+    override open func propertyMap() {
         map("name", string: &name)
         map("shoe_size", object: &shoeSize)
     }
